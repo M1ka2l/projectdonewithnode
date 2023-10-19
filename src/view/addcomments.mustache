@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Fake Api</title>
+</head>
+<body>
+
+    <a href="/posts">Voltar</a>
+
+    {{#post}}
+        <h3>{{title}}</h3>
+        <p>{{body}}</p>
+    {{/post}}
+
+    <h1>Comentários</h1>
+
+    <form method="post" action>
+        <div>
+            <label for="email">Seu e-mail:</label>
+            <input id="email" type="email" name="email" placeholder="Digite o seu e-mail:" required>
+        </div>
+        <div>
+            <label>Seu comentário:</label>
+            <textarea id="body" name="body" placeholder="Digite alguma coisa:" required></textarea>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+
+    {{#data}}
+        <h3>{{email}}</h3>
+        <p>{{body}}</p>
+    {{/data}}
+
+    {{#user}}
+        <h3>{{email}}</h3>
+        <p>{{body}}</p>
+    {{/user}}
+</body>
+</html>
